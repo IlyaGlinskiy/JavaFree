@@ -5,19 +5,17 @@ package by.glinkiy.lesson3.task18;
  * общее их количество.
  */
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class FindMarks {
     private static String text = "This text need from check punctuation marks! It's all.";
 
     public static void main(String[] args) {
-        Pattern pattern = Pattern.compile("[^'\\P{Punct}]");
-        Matcher matcher = pattern.matcher(text);
-        int count = 0;
-        while (matcher.find()) {
-            count++;
+        char[] arrChars = text.toCharArray();
+        int countMarks = 0;
+        for (int i = 0; i < arrChars.length; i++) {
+            if (arrChars[i] == ',' || arrChars[i] == '.' || arrChars[i] == ';' || arrChars[i] == ':' || arrChars[i] == '!' || arrChars[i] == '-' || arrChars[i] == '?' || arrChars[i] == '"' || arrChars[i] == '(' || arrChars[i] == ')') {
+                countMarks++;
+            }
         }
-        System.out.println(count + " Marks in this text");
+        System.out.println(countMarks + " Marks in this text");
     }
 }
