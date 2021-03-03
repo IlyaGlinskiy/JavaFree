@@ -1,6 +1,8 @@
 package by.glinkiy.lesson3.task19;
 
 import java.util.StringTokenizer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Имеется строка с текстом. Подсчитать количество слов в тексте. Желательно
@@ -18,5 +20,13 @@ public class WordsInString {
             wordsCount++;
         }
         System.out.println(wordsCount + " words in this string.");
+
+        Pattern pattern = Pattern.compile("\\b\\w+'?\\w\\b");
+        Matcher matcher = pattern.matcher(text);
+        int words = 0;
+        while (matcher.find()) {
+            words++;
+        }
+        System.out.println(words + " words in this string.");
     }
 }
