@@ -6,12 +6,10 @@ package by.glinkiy.lesson2.task9;
  */
 public class MultiplicationOfDigit {
     public static void main(String[] args) {
-        int n = 0;
         int sumMult = 1;
         int x = (int) (Math.random() * 20);
         while (x != 0) {
             sumMult *= x;
-            n++;
             x = (int) (Math.random() * 20);
         }
         System.out.println(sumMult);

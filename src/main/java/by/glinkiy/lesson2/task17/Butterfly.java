@@ -24,7 +24,7 @@ public class Butterfly {
             }
         }
 
-        for (int a[] : arr) {
+        for (int[] a : arr) {
             for (int x : a) {
                 System.out.print(x);
             }

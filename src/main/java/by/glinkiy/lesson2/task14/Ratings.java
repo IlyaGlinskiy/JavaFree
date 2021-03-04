@@ -8,37 +8,48 @@ import by.glinkiy.lesson2.task10.FactorialAnyDigit;
  */
 public class Ratings {
     public static void main(String[] args) {
-        int[] rt = new int[15];
-        for (int i = 0; i < rt.length; i++) {
-            rt[i] = FactorialAnyDigit.rnd(0, 100);
-
+        int[] rating = new int[15];
+        for (int i = 0; i < rating.length; i++) {
+            rating[i] = FactorialAnyDigit.rnd(0, 100);
+            System.out.print(rating[i] + " ");
         }
-        System.out.println("MaxRating is " + maxValue(rt));
-        System.out.println("MinRating is " + minValue(rt));
-//        for (int a:rt) {
-//            System.out.println(a);
-//        }
-
+        System.out.println("");
+        System.out.println(maxRating(rating));
+        System.out.println("");
+        System.out.println(minRating(rating));
     }
 
-    public static int maxValue(int[] mas) {
+    public static String maxRating(int[] rating) {
         int max = 0;
-        for (int i = 0; i < mas.length; i++) {
-            if (max < mas[i]) {
-                max = mas[i];
+        int maxIndex = 0;
+        for (int numbers : rating) {
+            if (max < numbers) {
+                max = numbers;
             }
         }
-        return max;
+        for (int i = 0; i < rating.length; i++) {
+            if (rating[i] == max) {
+                maxIndex = i;
+                System.out.println("MinIndex= " + maxIndex);
+            }
+        }
+        return "MaxRating is " + max + ".";
     }
 
-    public static int minValue(int[] mas) {
+    public static String minRating(int[] rating) {
         int min = 101;
-        for (int i = 0; i < mas.length; i++) {
-            if (min > mas[i]) {
-                min = mas[i];
+        int minIndex = 0;
+        for (int numbers : rating) {
+            if (min > numbers) {
+                min = numbers;
             }
         }
-        return min;
+        for (int i = 0; i < rating.length; i++) {
+            if (rating[i] == min) {
+                minIndex = i;
+                System.out.println("MinIndex= " + minIndex);
+            }
+        }
+        return "MinRating is " + min + ".";
     }
-
 }

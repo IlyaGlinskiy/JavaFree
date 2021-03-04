@@ -10,24 +10,18 @@ import java.util.Random;
 public class Rubles {
     public static void main(String[] args) {
         Random rand = new Random();
-        int x = rand.nextInt();
-        if (x < 0) {
-            System.out.println(x + rubTr(x));
-        } else {
-            System.out.println(x + rubTr(x));
+        int randomNumber = rand.nextInt();
+        if (randomNumber < 0) {
+            randomNumber *= -1;
         }
+        System.out.println(randomNumber + rubTr(randomNumber));
     }
 
     public static String rubTr(int value) {
-        if (value >= 0) {
-
-            if (value == 1 || value % 10 == 1) {
-                return " рубль";
-            } else if (value > 1 && value < 5 || value % 10 >= 2 && value % 10 <= 4) {
-                return " рубля";
-            } else return " рублей";
-        } else return " Digit don't must be negative";
+        if (value == 1 || value % 10 == 1) {
+            return " рубль";
+        } else if (value > 1 && value < 5 || value % 10 >= 2 && value % 10 <= 4) {
+            return " рубля";
+        } else return " рублей";
     }
-
-
 }

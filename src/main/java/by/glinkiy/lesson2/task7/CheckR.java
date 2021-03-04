@@ -7,22 +7,22 @@ package by.glinkiy.lesson2.task7;
 
 public class CheckR {
     public static void main(String[] args) {
-        int a, b, r;
-        a = 10;
-        b = 20;
-        r = 9;
-        if (biggestSide(a, b) < r * 2) {
+        int width, length, radius;
+        width = 10;
+        length = 20;
+        radius = 9;
+        if (biggestSide(width, length) < radius * 2) {
             System.out.println("Circle will closing of rectangle");
         } else {
             System.out.println("Rectangle more of circle");
         }
     }
 
-    public static int biggestSide(int value1, int value2) {
-        if (value1 < value2) {
-            return value2;
+    public static int biggestSide(int width, int length) {
+        if (width < length) {
+            return length;
         } else {
-            return value1;
+            return width;
         }
     }
 }

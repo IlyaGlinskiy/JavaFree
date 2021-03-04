@@ -10,8 +10,6 @@ public class DivisionOnThree {
         for (int i = 0; i < x; i++) {
             if (i % 3 == 0) {
                 sum += i;
-            } else {
-                continue;
             }
         }
         System.out.println(sum);

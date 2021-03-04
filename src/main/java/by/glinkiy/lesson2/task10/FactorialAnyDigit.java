@@ -3,8 +3,6 @@ package by.glinkiy.lesson2.task10;
  * Посчитать факториал числа в границах от 10 до 15 (не используя рекурсию).
  */
 
-import java.util.Random;
-
 public class FactorialAnyDigit {
     public static void main(String[] args) {
         int min = 10;

@@ -21,7 +21,7 @@ package by.glinkiy.lesson2.task6;
                         return "Digit even and not ending 7";
                     } else return "Digit odd and not ending 7";
                 }
-            } else return "The number is not three-digit";
+            } else return "The number is not three-digit or digit is negative.";
         }
     }
 
